@@ -59,7 +59,7 @@ with tab1:
 
     st.plotly_chart(fig, use_container_width=True)
 
-with tab2
+with tab2:
     # Tools used
     fig = px.line(df_tools, 
                 x="Year", 
