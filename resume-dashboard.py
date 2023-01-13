@@ -32,7 +32,7 @@ m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
 
 # Filling Header Boxes In
 m1.write('')
-m2.metric(label ='Furthest Education', value = 'Masters (in Progress)')
+m2.metric(label ='Furthest Education', value = 'Masters')
 m3.metric(label ='Years of Experience', value = '5+')
 m4.metric(label ='Passion', value = 'Data')
 m5.write('')
