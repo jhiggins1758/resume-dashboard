@@ -17,7 +17,7 @@ st.set_page_config(page_title='JH Background',  layout='wide', page_icon=':circl
 # this is the header
 t1, t2 = st.columns((0.07,1)) 
 
-t1.image('images/index.png', width = 120)
+t1.image('index.png', width = 120)
 t2.title("Joseph Higgins' Background")
 # t2.markdown("TIPAC")
 
