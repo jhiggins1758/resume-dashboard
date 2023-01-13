@@ -64,7 +64,7 @@ with tab1:
     fig.update_yaxes(title='')
     fig.update_xaxes(title='')
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, use_container_height=True)
 
 with tab2:
     # Tools used
