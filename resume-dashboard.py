@@ -42,7 +42,13 @@ with tab1:
     fig = px.line(df_organizations, 
                 x="Year", 
                 y="Organization", 
-                color='Organization')
+                color='Organization',
+              color_discrete_map={
+                "Michigan State University ": "DarkGreen",
+                "Jackson National Life": "Purple",
+                "University of Michigan": "goldenrod",
+                "Deloitte": "Black",
+              })
 
     fig.update_layout(xaxis=dict(showgrid=False),
                     yaxis=dict(showgrid=False),
@@ -64,7 +70,15 @@ with tab2:
     fig = px.line(df_tools, 
                 x="Year", 
                 y="Tool", 
-                color='Tool')
+                color='Tool',
+              color_discrete_map={
+                "R": "Blue",
+                "SQL": "Gray",
+                "SAS": "LightBlue",
+                "Tableau": "Green",
+                "Linux": "Black", 
+                "Python": "Orange",
+              })
 
     fig.update_layout(xaxis=dict(showgrid=False),
                     yaxis=dict(showgrid=False),
