@@ -25,8 +25,6 @@ t1.image('index.png', width=120)
 t2.title("Joseph Higgins' Background")
 # t2.markdown("TIPAC")
 
-tab1 = st.tabs(["Background"])
-
 # Creating Header Boxes
 m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
 
@@ -37,43 +35,48 @@ m3.metric(label ='Years of Experience', value = '5+')
 m4.metric(label ='Passion', value = 'Data')
 m5.write('')
 
-fig = px.line(df_tools, 
-            x="Year", 
-            y="Tool", 
-            color='Tool')
+tab1, tab2 = st.tabs(["Tools", "Organizations"])
 
-fig.update_layout(xaxis=dict(showgrid=False),
-                yaxis=dict(showgrid=False),
-                plot_bgcolor = "white",
-                font=dict(
-                                family="Helvetica",
-                                size=14,
-                                color="Black"
-                            ))
+with tab1:
+    # Tools used
+    fig = px.line(df_tools, 
+                x="Year", 
+                y="Tool", 
+                color='Tool')
 
-fig.update_traces(line=dict(width=12))
-fig.update_yaxes(title='')
-fig.update_xaxes(title='')
+    fig.update_layout(xaxis=dict(showgrid=False),
+                    yaxis=dict(showgrid=False),
+                    plot_bgcolor = "white",
+                    font=dict(
+                                    family="Helvetica",
+                                    size=14,
+                                    color="Black"
+                                ))
 
-st.plotly_chart(fig, use_container_width=True)
+    fig.update_traces(line=dict(width=12))
+    fig.update_yaxes(title='')
+    fig.update_xaxes(title='')
 
-# # Organizations Worked
-# fig = px.line(df_organizations, 
-#             x="Year", 
-#             y="Organization", 
-#             color='Organization')
+    st.plotly_chart(fig, use_container_width=True)
 
-# fig.update_layout(xaxis=dict(showgrid=False),
-#                 yaxis=dict(showgrid=False),
-#                 plot_bgcolor = "white",
-#                 font=dict(
-#                                 family="Helvetica",
-#                                 size=14,
-#                                 color="Black"
-#                             ))
+with tab2:
+    # Organizations Worked
+    fig = px.line(df_organizations, 
+                x="Year", 
+                y="Organization", 
+                color='Organization')
 
-# fig.update_traces(line=dict(width=12))
-# fig.update_yaxes(title='')
-# fig.update_xaxes(title='')
+    fig.update_layout(xaxis=dict(showgrid=False),
+                    yaxis=dict(showgrid=False),
+                    plot_bgcolor = "white",
+                    font=dict(
+                                    family="Helvetica",
+                                    size=14,
+                                    color="Black"
+                                ))
 
-# g2.plotly_chart(fig, use_container_width=True)
+    fig.update_traces(line=dict(width=12))
+    fig.update_yaxes(title='')
+    fig.update_xaxes(title='')
+
+    st.plotly_chart(fig, use_container_width=True)
