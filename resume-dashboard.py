@@ -35,14 +35,14 @@ m3.metric(label ='Years of Experience', value = '5+')
 m4.metric(label ='Passion', value = 'Data')
 m5.write('')
 
-tab1, tab2 = st.tabs(["Tools", "Organizations"])
+tab1, tab2 = st.tabs(["Organizations", "Tools"])
 
 with tab1:
-    # Tools used
-    fig = px.line(df_tools, 
+    # Organizations Worked
+    fig = px.line(df_organizations, 
                 x="Year", 
-                y="Tool", 
-                color='Tool')
+                y="Organization", 
+                color='Organization')
 
     fig.update_layout(xaxis=dict(showgrid=False),
                     yaxis=dict(showgrid=False),
@@ -59,12 +59,12 @@ with tab1:
 
     st.plotly_chart(fig, use_container_width=True)
 
-with tab2:
-    # Organizations Worked
-    fig = px.line(df_organizations, 
+with tab2
+    # Tools used
+    fig = px.line(df_tools, 
                 x="Year", 
-                y="Organization", 
-                color='Organization')
+                y="Tool", 
+                color='Tool')
 
     fig.update_layout(xaxis=dict(showgrid=False),
                     yaxis=dict(showgrid=False),
