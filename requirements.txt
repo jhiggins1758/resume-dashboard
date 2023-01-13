@@ -2,6 +2,3 @@ streamlit
 pandas
 plotly
 openpyxl
-pyodbc
-# time
-# re
