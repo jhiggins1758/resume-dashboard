@@ -5,7 +5,6 @@ Created on Friday January 13th 2023
 @author: joshiggins
 """
 # Importing full packages
-import geopy
 import openpyxl
 import streamlit as st
 import time
