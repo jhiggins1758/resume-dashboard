@@ -12,12 +12,6 @@ import time
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import leafmap.foliumap as leafmap
-import pyodbc
-
-# Importing partial packages
-from geopy.exc import GeocoderTimedOut
-from geopy.geocoders import Nominatim
 
 st.set_page_config(page_title='JH Background',  layout='wide', page_icon=':circle:')
 
