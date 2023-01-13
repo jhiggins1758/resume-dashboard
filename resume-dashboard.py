@@ -4,6 +4,7 @@ Created on Friday January 13th 2023
 
 @author: joshiggins
 """
+
 # Importing full packages
 import openpyxl
 import streamlit as st
@@ -22,8 +23,8 @@ st.set_page_config(page_title='JH Background',  layout='wide', page_icon=':circl
 # This is the header
 t1, t2 = st.columns((0.07,1)) 
 t1.image('index.png', width=120)
-t2.title("Joseph Higgins' Background")
-# t2.markdown("TIPAC")
+t2.title("Joseph Higgins")
+t2.markdown("Background")
 
 # Creating Header Boxes
 m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
